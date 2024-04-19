@@ -10,12 +10,16 @@ let themeMode=0;
 themebtn.onclick = () => {
     if (themeMode){
         themeMode=0;
-        document.body.style.backgroundColor = "#f9faf8";
+        document.getElementById("header").style.backgroundColor = "#ffffff";
+        document.getElementById("right-container").style.backgroundColor = "#e2e8f0";
+        document.body.style.color = "black";
         divImg.style.backgroundImage = "url('https://www.svgrepo.com/show/20546/sun.svg')";
     }
     else {
         themeMode=1;
-        document.body.style.backgroundColor = "#181818";
+        document.getElementById("header").style.backgroundColor = "#181818";
+        document.getElementById("right-container").style.backgroundColor = "#232327";
+        document.body.style.color = "white";
         divImg.style.backgroundImage = "url('https://www.svgrepo.com/show/79251/crescent-moon.svg')";
     }
 }
