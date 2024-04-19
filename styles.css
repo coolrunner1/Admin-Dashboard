@@ -1,3 +1,29 @@
+:root {
+	--border-btn: 1px solid rgb(36, 36, 36);
+	--color-base-bg: rgb(240, 240, 240);
+	--color-base-text: rgb(18, 18, 18);
+	--color-btn-bg: rgb(220, 220, 220);
+	--theme-name: "light";
+  }
+  
+  body {
+	background-color: var(--color-base-bg);
+	color: var(--color-base-text);
+	padding: 10px;
+  }
+  
+  .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  p {
+	font-size: 1.5rem;
+  }
+  
+  
+
 body {
 	padding: 0;
 	margin: 0;
@@ -21,8 +47,9 @@ button:hover, input:hover {
 	grid-template-rows: repeat(2, 100%);
 }
 
-#left-container {
+#sidebar {
 	background-color: #1992d4;
+	color: #ffffff;
 }
 
 #right-container {
@@ -53,3 +80,39 @@ button, input {
 	margin: 0;
 	font-family: arial;
 }
+
+#dashboard-img {
+	width: 50px;
+	height: 50px;
+}
+
+svg > path{
+	fill: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+	  --border-btn: 1px solid rgb(220, 220, 220);
+	  --color-base-bg: rgb(18, 18, 18);
+	  --color-base-text: rgb(240, 240, 240);
+	  --color-btn-bg: rgb(36, 36, 36);
+	  --theme-name: "dark";
+	}
+	svg > path{
+		fill: #000000;
+	}
+	#right-container {
+		background-color: #232327;
+	}
+	
+	#header {
+		background-color: #181818;
+	}
+	#sidebar {
+		color: #000000;
+	}
+  }
+  
+  .theme-name::after {
+	content: var(--theme-name);
+  }
