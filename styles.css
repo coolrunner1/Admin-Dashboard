@@ -109,10 +109,3 @@ button, input {
 svg > path{
 	fill: var(--svg-fill);
 }
-
-/*
-svg > path{
-	fill: #ffffff;
-}
-*/
-

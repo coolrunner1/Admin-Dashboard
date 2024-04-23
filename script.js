@@ -2,7 +2,16 @@ const themebtn=document.querySelector("#theme");
 const divImg = document.createElement("div");
 divImg.style.width="100%";
 divImg.style.height="100%";
-divImg.style.backgroundImage = "url('./images/sun-svgrepo-com.svg')";
+let themeName=getComputedStyle(document.body).getPropertyValue('--theme-name');
+console.log(themeName)
+if (themeName=='"light"'){
+    divImg.style.backgroundImage = "url('./images/sun-svgrepo-com.svg')";
+}
+
+else {
+    divImg.style.backgroundImage = "url('./images/crescent-moon-svgrepo-com.svg')";
+}
+
 divImg.style.backgroundRepeat= "no-repeat";
 divImg.style.backgroundSize = "cover";
 themebtn.appendChild(divImg);
