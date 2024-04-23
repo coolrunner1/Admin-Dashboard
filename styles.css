@@ -1,26 +1,22 @@
 :root {
-	--border-btn: 1px solid rgb(36, 36, 36);
 	--color-base-bg: rgb(240, 240, 240);
 	--color-base-text: rgb(18, 18, 18);
-	--color-btn-bg: rgb(220, 220, 220);
 	--theme-name: "light";
-	--svg-fill: #ffffff;
+	--svg-fill: #000000;
 	--right-container-color: #e2e8f0;
 	--header-color: #ffffff;
-	--sidebar-color: #ffffff;
+	--sidebar-color: #000000;
 	--theme-name: "light";
 }
 @media (prefers-color-scheme: dark) {
 	:root {
-	  --border-btn: 1px solid rgb(220, 220, 220);
 	  --color-base-bg: rgb(18, 18, 18);
 	  --color-base-text: rgb(240, 240, 240);
-	  --color-btn-bg: rgb(36, 36, 36);
 	  --theme-name: "dark";
-	  --svg-fill: #000000;
+	  --svg-fill: #ffffff;
 	  --right-container-color: #232327;
 	  --header-color: #181818;
-	  --sidebar-color: #000000;
+	  --sidebar-color: #ffffff;
 	  --theme-name: "dark";
 	}
 	
