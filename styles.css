@@ -1,4 +1,8 @@
-:root :root.light {
+:root {
+	--theme-name: "light";
+}
+
+:root.light {
 	--color-base-bg: rgb(240, 240, 240);
 	--color-base-text: rgb(18, 18, 18);
 	--svg-fill: #000000;
@@ -13,6 +17,30 @@
 	  --theme-name: "dark";
 	}
 	
+}
+
+@media screen{
+	#main-container {
+	--sidebar-size: clamp(10px, 30%, 300px);
+	}
+	#dashboard-img + div {
+		--dash-text-width: clamp(0px, 10%, 50px);
+		--dash-text-padding: 10px;
+	}
+}
+
+
+@media screen and (max-width: 665px){
+	#main-container {
+	--sidebar-size: clamp(10px, 10%, 300px);
+	}
+	#dashboard-img + div {
+		--dash-text-width: 0%;
+		--dash-text-padding: 0;
+	}
+	#dashboard{
+		color:#1992d4;
+	}
 }
 
 :root.dark {
@@ -59,10 +87,17 @@ button:hover, input:hover {
 	border-color: #005ff7;
 }
 
+#header {
+	display: grid;
+	background-color: var(--header-color);
+	grid-template-columns: clamp(10px, 10%, 50px) 100%;
+	padding: 10px;
+}
+
 #main-container {
 	height: 100vh;
 	display: grid;
-	grid-template-columns: clamp(100px, 30%, 300px) 100vw;
+	grid-template-columns: var(--sidebar-size) 100%;
 	grid-template-rows: repeat(2, 100%);
 }
 
@@ -76,11 +111,6 @@ button:hover, input:hover {
 #right-container {
 	background-color: var(--right-container-color);
 }
-
-#header {
-	background-color: var(--header-color);
-}
-
 
 button, input {
 	display: flex;
@@ -114,9 +144,18 @@ button, input {
 }
 
 #dashboard-img + div {
-	padding: 10px;
+	padding: var(--dash-text-padding);
+	height: auto;
+	width: var(--dash-text-width);
 }
 
 svg > path{
 	fill: var(--svg-fill);
+}
+
+#theme > div{
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
