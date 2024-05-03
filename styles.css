@@ -10,6 +10,12 @@
 	--header-color: #ffffff;
 	--sidebar-color: #000000;
 	--theme-name: "light";
+	--search-bar-bg: #e2e8f0;
+	--input-color: #181818;
+	#sidebar{
+		--svg-fill: #ffffff;
+		--sidebar-color: #ffffff;
+	}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,21 +33,32 @@
 		--dash-text-width: clamp(0px, 10%, 50px);
 		--dash-text-padding: 10px;
 	}
+	#header{
+		--name-size: 120px;
+	}
 }
-
 
 @media screen and (max-width: 665px){
 	#main-container {
-	--sidebar-size: clamp(10px, 10%, 300px);
+	--sidebar-size: clamp(55px, 10%, 300px);
 	}
 	#dashboard-img + div {
 		--dash-text-width: 0%;
 		--dash-text-padding: 0;
+		position: absolute;
+		font-size: 0;
 	}
 	#dashboard{
 		color:#1992d4;
 	}
+	#header{
+		--name-size: 0;
+	}
+	#header > div{
+		font-size: 0px;
+	}
 }
+
 
 :root.dark {
 	--color-base-bg: rgb(18, 18, 18);
@@ -51,6 +68,12 @@
 	--header-color: #181818;
 	--sidebar-color: #ffffff;
 	--theme-name: "dark";
+	--search-bar-bg: #303134;
+	--input-color: rgb(240, 240, 240);
+	#sidebar{
+		--svg-fill: #000000;
+		--sidebar-color: #000000;
+	}
 }
   
 body {
@@ -82,22 +105,31 @@ div {
     z-index: 99;
 }
 
-button:hover, input:hover {
-	background-color: #005ff7;
-	border-color: #005ff7;
+
+
+button:hover {
+	background-color: #969797;
+}
+
+svg:hover > path{
+	fill: #969797;
 }
 
 #header {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-weight: bolder;
+	font-size: 20px;
 	display: grid;
+	gap: 15px;
 	background-color: var(--header-color);
-	grid-template-columns: clamp(10px, 10%, 50px) 100%;
+	grid-template-columns: clamp(30px, 10%, 45px) auto repeat(3, clamp(30px, 10%, 45px)) var(--name-size)/* clamp(30px, 15%, 55px) clamp(30px, 10%, 50px) auto*/;
 	padding: 10px;
 }
 
 #main-container {
 	height: 100vh;
 	display: grid;
-	grid-template-columns: var(--sidebar-size) 100%;
+	grid-template-columns: var(--sidebar-size) auto;
 	grid-template-rows: repeat(2, 100%);
 }
 
@@ -118,15 +150,15 @@ button, input {
 	padding: 10px 10px;
 	margin: 0 25px;
 	width: 100%;
-	max-width: 50px;
+	/*max-width: 50px;*/
 	height: 50px;
-	color: #e5e7eb;
+	color: var(--input-color);
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-weight: bolder;
 	font-size: 16px;
-	background-color: #3882f6;
+	background-color: transparent;
 	border-style: solid;
-	border-color: #3882f6;
+	border-color: transparent;
 	border-radius: 10px;
 	margin: 0;
 	font-family: arial;
@@ -149,8 +181,24 @@ button, input {
 	width: var(--dash-text-width);
 }
 
-svg > path{
+svg > path {
 	fill: var(--svg-fill);
+}
+
+
+#search-bar {
+	margin: auto;
+	padding: 0;
+	max-height: 30px;
+	background-color: var(--search-bar-bg);
+}
+
+#theme {
+	width:10vw;
+    height:10vw;
+	max-width: 50px;
+	max-height: 50px;
+	padding: 3px;
 }
 
 #theme > div{
@@ -159,3 +207,20 @@ svg > path{
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+#avatar{
+	background-image: url(https://avatars.githubusercontent.com/u/153802775?v=4);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width:10vw;
+    height:10vw;
+	max-width: 50px;
+	max-height: 50px;
+	border-radius: 100px
+}
+
+.header-text{
+	padding: 10px 0;
+	text-align: center;
+}
+
