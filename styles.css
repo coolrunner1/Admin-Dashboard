@@ -130,7 +130,7 @@ button:hover {
 	background-color: #969797;
 }
 
-#header > svg:hover > path{
+#first-header > svg:hover > path{
 	fill: #969797;
 }
 
@@ -146,7 +146,7 @@ button:hover {
 
 #first-header {
 	display: grid;
-	grid-template-columns: clamp(30px, 10%, 45px) auto repeat(3, clamp(30px, 10%, 45px)) var(--name-size)/* clamp(30px, 15%, 55px) clamp(30px, 10%, 50px) auto*/;
+	grid-template-columns: clamp(30px, 10%, 45px) auto repeat(3, clamp(30px, 10%, 45px)) var(--name-size);
 	gap: 15px;
 }
 #second-header {
@@ -291,7 +291,7 @@ svg > path {
 
 #main-content-container{
 	display: grid;
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 2fr 0.8fr;
 	grid-template-rows: 500px;
 }
 
