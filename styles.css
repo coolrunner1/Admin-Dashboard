@@ -288,6 +288,17 @@ svg > path {
 	background-color: #005ff7;
 	border-color: #005ff7;
 }
+
+#main-content-container{
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 500px;
+}
+
+#main-content-container > div{
+	border: solid;
+	border-color: #005ff7;
+}
 /*#sidebar-icons > div {
 	padding: var(--dash-text-padding);
 	height: auto;
