@@ -201,8 +201,8 @@ h1, h2, h3, h4, h5{
 }
 
 #main-container {
-	height: 100vh;
-	min-height: 700px;
+	height: 100%;
+	min-height: 100vh;
 	display: grid;
 	grid-template-columns: var(--sidebar-size) auto;
 	grid-template-rows: repeat(2, 100%);
@@ -213,6 +213,7 @@ h1, h2, h3, h4, h5{
 	font-size: 1.5em;
 	font-weight: bold;
 	color: #ffffff;
+	
 }
 
 .sidebar-icon{
@@ -259,6 +260,8 @@ h1, h2, h3, h4, h5{
 }
 
 #right-container {
+	height: 100%;
+	min-height: 100vh;
 	background-color: var(--right-container-color);
 }
 
@@ -387,7 +390,6 @@ svg > path {
 	gap: 1vw;
 	grid-template-columns: var(--content-columns);
 	grid-template-rows: var(--content-rows);
-	max-height: 85vh;
 }
 
 .project-entries{
