@@ -333,7 +333,7 @@ svg > path {
 	background-size: cover;
 }
 
-#avatar{
+#avatar, .trending-icons{
 	background-image: url(https://avatars.githubusercontent.com/u/153802775?v=4);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -441,7 +441,7 @@ svg > path {
 	margin: 10px;
 }
 
-#trending > h5, .announcement > h5, .project-content > h5{
+.trending-entry > div > h5, .announcement > h5, .project-content > h5{
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	color: var(--project-color);
 }
@@ -469,25 +469,31 @@ svg > path {
 }
 
 .trending-icons{
-	width: 56px;
-	height: 50px;
-	border-radius: 100px;
+	min-width: 30px;
+	min-height: 30px;
 }
 
-.trending-icon-1{
-	background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg");
+#trending-icon-1{
+	background-image: url("./images/react.svg");
 }
 
 #trending-icon-2{
-	background-image: url(https://avatars.githubusercontent.com/u/153802775?v=4);
+	background-image: url("./images/docker.svg");
 }
 
 #trending-icon-3{
-	background-image: url(https://avatars.githubusercontent.com/u/153802775?v=4);
+	background-image: url("./images/webpack.svg");
 }
 
 #trending-icon-4{
-	background-image: url(https://avatars.githubusercontent.com/u/153802775?v=4);
+	background-image: url("./images/Tailwind.svg");
+}
+
+.trending-entry{
+	display: flex;
+	direction: row;
+	gap: 2px;
+	margin: 5px;
 }
 
 /*#sidebar-icons > div {
