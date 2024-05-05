@@ -13,6 +13,8 @@
 	--input-color: #181818;
 	--sidebar-bg: #1992d4;
 	--project-color: #636363;
+	--github-icon: url(./images/github.svg);
+	--preview-icon: url(./images/eye-outline.svg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,7 +45,7 @@
 	}
 	#projects-container{
 		--content-columns: 1fr 1fr;
-		--content-rows: repeat(5, 100px);
+		--content-rows: repeat(5, 1fr);
 	}
 }
 
@@ -96,21 +98,21 @@
 	}
 	#projects-container{
 		--content-columns: 1fr;
-		--content-rows: repeat(5, 100px);
+		--content-rows: repeat(5, 1fr);
 	}
 }
 
 @media screen and (min-width: 1400px){
 	#projects-container{
 		--content-columns: repeat(3, 1fr);
-		--content-rows: repeat(5, 100px);
+		--content-rows: repeat(5, 1fr);
 	}
 }
 
 @media screen and (min-width: 2300px){
 	#projects-container{
 		--content-columns: repeat(4, 1fr);
-		--content-rows: repeat(5, 100px);
+		--content-rows: repeat(5, 1fr);
 	}
 }
 
@@ -125,6 +127,8 @@
 	--input-color: rgb(240, 240, 240);
 	--sidebar-bg: #3882f6;
 	--project-color:#919191;
+	--github-icon: url(./images/github-dark.svg);
+	--preview-icon: url(./images/eye-outline-dark.svg);
 }
   
 body {
@@ -333,11 +337,6 @@ svg > path {
 	gap: 5px;
 }
 
-/*#main-content-container > div{
-	border: solid;
-	border-color: #005ff7;
-}*/
-
 #projects-container{
 	display: grid;
 	gap: 1vw;
@@ -393,9 +392,29 @@ svg > path {
 	color: var(--project-color);
 }
 
-.trending-icons{
+.project-icons{
+	display: grid;
+	gap: 5px;
+	grid-template-rows: 30px;
+	grid-template-columns: auto repeat(2, 30px);
+}
+
+.main-content-icons{
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 30px;
+	width: 30px;
+}
+
+.live-preview{
+	background-image: var(--preview-icon);
+}
+
+.github-page{
+	background-image: var(--github-icon);
+}
+
+.trending-icons{
 	width:10vw;
     height:10vw;
 	max-width: 50px;
