@@ -486,22 +486,12 @@ svg > path {
 }
 
 #trending-icon-4{
-	background-image: url("./images/Tailwind.svg");
+	background-image: none;
 }
 
 .trending-entry{
 	display: flex;
 	direction: row;
-	gap: 2px;
-	margin: 5px;
+	gap: 5px;
+	margin: 10px;
 }
-
-/*#sidebar-icons > div {
-	padding: var(--dash-text-padding);
-	height: auto;
-	width: var(--dash-text-width);
-}*/
-
-/*.icon-text:hover{
-	color: #969797;
-}*/
