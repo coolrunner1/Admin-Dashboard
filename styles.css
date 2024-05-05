@@ -33,8 +33,16 @@
 		--name-size: 120px;
 		--second-grid-size: clamp(30px, 10%, 45px) auto repeat(3, clamp(65px, 10%, 85px));
 	}
+	#main-content-container{
+		--content-columns: 2fr 0.8fr;
+		--content-rows: auto;
+	}
 	button{
 		--button-font-size: 16px;
+	}
+	#projects-container{
+		--content-columns: 1fr 1fr;
+		--content-rows: 100px 100px;
 	}
 }
 
@@ -78,8 +86,29 @@
 	button{
 		--button-font-size: 14px;
 	}
+	#main-content-container{
+		--content-columns: auto;
+		--content-rows: auto auto;
+	}
+	#projects-container{
+		--content-columns: 1fr;
+		--content-rows: repeat(4, 100px);
+	}
 }
 
+@media screen and (min-width: 1400px){
+	#projects-container{
+		--content-columns: repeat(3, 1fr);
+		--content-rows: repeat(4, 100px);
+	}
+}
+
+@media screen and (min-width: 2300px){
+	#projects-container{
+		--content-columns: repeat(4, 1fr);
+		--content-rows: repeat(4, 100px);
+	}
+}
 
 :root.dark {
 	--color-base-bg: rgb(18, 18, 18);
@@ -291,13 +320,41 @@ svg > path {
 
 #main-content-container{
 	display: grid;
-	grid-template-columns: 2fr 0.8fr;
-	grid-template-rows: 500px;
+	grid-template-columns: var(--content-columns);
+	grid-template-rows: var(--content-rows);
+	text-align: center;
+	padding: 10px;
+	gap: 5px;
 }
 
 #main-content-container > div{
 	border: solid;
 	border-color: #005ff7;
+}
+
+#projects-container{
+	display: grid;
+	gap: 1vw;
+	grid-template-columns: var(--content-columns);
+	grid-template-rows: var(--content-rows);
+}
+
+.project-entries{
+	display: grid;
+	grid-template-columns: 8px;
+	background-color: var(--header-color);
+	border: transparent;
+	border-color: var(--header-color);
+	border-left-color: #f0b429;
+	border-radius: 10px;
+	margin: 5px;
+	box-shadow: 2px 2px 0 0 #30313411;
+}
+
+.yellow-stripe{
+	background-color: #f0b429;
+	border: transparent;
+	border-radius: 50px 0 0 50px;
 }
 /*#sidebar-icons > div {
 	padding: var(--dash-text-padding);
