@@ -1,5 +1,6 @@
 :root {
 	--theme-name: "light";
+	--dash-img-size: 50px;
 }
 
 :root.light {
@@ -61,6 +62,7 @@
 	}
 	#dashboard{
 		color:#1992d4;
+		--dash-img-size: 40px;
 	}
 	#header{
 		--second-grid-size: auto repeat(3, clamp(65px, 10%, 85px));
@@ -211,7 +213,49 @@ h1, h2, h3, h4, h5{
 	font-size: 1.5em;
 	font-weight: bold;
 	color: #ffffff;
-	--svg-fill: #ffffff;
+}
+
+.sidebar-icon{
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 30px;
+	width: auto;
+}
+
+#home-icon{
+	background-image: url(./images/home-icon.svg);
+}
+
+#profile-icon{
+	background-image: url(./images/profile-icon.svg);
+}
+
+#messages-icon{
+	background-image: url(./images/messages-icon.svg);
+}
+
+#history-icon{
+	background-image: url(./images/history-icon.svg);
+}
+
+#tasks-icon{
+	background-image: url(./images/tasks-icon.svg);
+}
+
+#communities-icon{
+	background-image: url(./images/communities.svg);
+}
+
+#settings-icon{
+	background-image: url(./images/settings-icon.svg);
+}
+
+#support-icon{
+	background-image: url(./images/support-icon.svg);
+}
+
+#privacy-icon{
+	background-image: url(./images/privacy-icon.svg);
 }
 
 #right-container {
@@ -245,12 +289,13 @@ input{
 #dashboard {
 	display: flex;
 	flex-direction: row;
-	padding: 10px;
+	padding: 8px;
 }
 
 #dashboard-img {
-	width: 50px;
-	height: 50px;
+	background-image: url(./images/dash.svg);
+	width: var(--dash-img-size);
+	height: var(--dash-img-size);
 }
 
 #dashboard-img + div {
