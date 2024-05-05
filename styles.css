@@ -42,7 +42,7 @@
 	}
 	#projects-container{
 		--content-columns: 1fr 1fr;
-		--content-rows: 100px 100px;
+		--content-rows: repeat(5, 100px);
 	}
 }
 
@@ -92,21 +92,21 @@
 	}
 	#projects-container{
 		--content-columns: 1fr;
-		--content-rows: repeat(4, 100px);
+		--content-rows: repeat(5, 100px);
 	}
 }
 
 @media screen and (min-width: 1400px){
 	#projects-container{
 		--content-columns: repeat(3, 1fr);
-		--content-rows: repeat(4, 100px);
+		--content-rows: repeat(5, 100px);
 	}
 }
 
 @media screen and (min-width: 2300px){
 	#projects-container{
 		--content-columns: repeat(4, 1fr);
-		--content-rows: repeat(4, 100px);
+		--content-rows: repeat(5, 100px);
 	}
 }
 
@@ -298,6 +298,7 @@ svg > path {
 	gap: 10px;
 	grid-template-columns: clamp(30px, 10%, 45px) auto;
 	grid-template-rows: repeat(6, 50px) 75px repeat(3, 50px);
+	padding-bottom: 0;
 }
 
 .second-avatar{
@@ -322,26 +323,27 @@ svg > path {
 	display: grid;
 	grid-template-columns: var(--content-columns);
 	grid-template-rows: var(--content-rows);
-	text-align: center;
+	text-align: left;
 	padding: 10px;
 	gap: 5px;
 }
 
-#main-content-container > div{
+/*#main-content-container > div{
 	border: solid;
 	border-color: #005ff7;
-}
+}*/
 
 #projects-container{
 	display: grid;
 	gap: 1vw;
 	grid-template-columns: var(--content-columns);
 	grid-template-rows: var(--content-rows);
+	max-height: 85vh;
 }
 
 .project-entries{
 	display: grid;
-	grid-template-columns: 8px;
+	grid-template-columns: 8px auto;
 	background-color: var(--header-color);
 	border: transparent;
 	border-color: var(--header-color);
@@ -355,6 +357,27 @@ svg > path {
 	background-color: #f0b429;
 	border: transparent;
 	border-radius: 50px 0 0 50px;
+}
+
+#announcements, #trending{
+	background-color: var(--header-color);
+	padding: 10px;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, 100px);
+	border: transparent;
+	border-radius: 10px;
+}
+
+hr {
+	border-color: pink;
+}
+
+.announcement{
+	border-bottom: 1px solid var(--right-container-color);
+}
+
+.last{
+	border: none;
 }
 /*#sidebar-icons > div {
 	padding: var(--dash-text-padding);
