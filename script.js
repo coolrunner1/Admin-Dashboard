@@ -29,3 +29,9 @@ themebtn.onclick = () => {
     }
 }
 
+let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+if (isSafari){
+    const svgElements = document.querySelectorAll('svg');
+    svgElements[0].setAttribute('width', '45px');
+    svgElements[1].setAttribute('width', '45px');
+}

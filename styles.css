@@ -164,8 +164,6 @@ div {
     z-index: 99;
 }
 
-
-
 button:hover {
 	background-color: #969797;
 }
@@ -493,5 +491,5 @@ svg > path {
 	display: flex;
 	direction: row;
 	gap: 5px;
-	margin: 10px;
+	margin: 15px;
 }
