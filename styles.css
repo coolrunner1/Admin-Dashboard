@@ -52,7 +52,7 @@
 
 @media screen and (max-width: 735px){
 	#main-container {
-	--sidebar-size: clamp(55px, 10%, 300px);
+	--sidebar-size: 55px;
 	}
 	#dashboard-img + div {
 		--dash-text-width: 0%;
@@ -489,7 +489,7 @@ svg > path {
 
 .trending-entry{
 	display: flex;
-	direction: row;
+	flex-direction: row;
 	gap: 5px;
 	margin: 15px;
 }
