@@ -138,7 +138,7 @@ body {
 	color: var(--color-base-text);
 	padding: 10px;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+	transition: background-color 1s ease;
   }
   
   .container {
@@ -166,6 +166,7 @@ div {
 
 button:hover {
 	background-color: #969797;
+	transition: background-color 1s ease;
 }
 
 a:hover > svg > path, #first-header > svg:hover > path{
@@ -179,6 +180,7 @@ a:hover > svg > path, #first-header > svg:hover > path{
 	display: grid;
 	gap: 15px;
 	background-color: var(--header-color);
+	transition: background-color 1s ease;
 	padding: 10px;
 }
 
@@ -208,10 +210,13 @@ h1, h2, h3, h4, h5{
 
 #sidebar {
 	background-color: var(--sidebar-bg);
+	background-image: url("./images/react.svg");
+	background-repeat: no-repeat;
 	font-size: 1.5em;
 	font-weight: bold;
 	color: #ffffff;
-	
+	transition: background-color 1s ease;
+
 }
 
 .sidebar-icon{
@@ -261,6 +266,7 @@ h1, h2, h3, h4, h5{
 	height: 100%;
 	min-height: 100vh;
 	background-color: var(--right-container-color);
+	transition: background-color 1s ease;
 }
 
 button, input {
@@ -314,6 +320,7 @@ svg > path {
 	padding: 0;
 	max-height: 30px;
 	background-color: var(--search-bar-bg);
+	transition: background-color 1s ease;
 }
 
 #theme {
@@ -367,11 +374,13 @@ svg > path {
 	padding: 7px;
 	max-height: 35px;
 	border-radius: 60px;
+	transition: background-color 1s ease;
 }
 
 .buttons-head:hover {
 	background-color: #005ff7;
 	border-color: #005ff7;
+	transition: background-color 1s ease;
 }
 
 #main-content-container{
@@ -400,6 +409,7 @@ svg > path {
 	border-radius: 10px;
 	margin: 5px;
 	box-shadow: 2px 2px 0 0 #30313411;
+	transition: background-color 1s ease;
 }
 
 .yellow-stripe{
@@ -417,6 +427,8 @@ svg > path {
 	border: transparent;
 	border-radius: 10px;
 	box-shadow: 2px 2px 0 0 #30313411;
+	transition: background-color 1s ease;
+
 }
 
 .announcement{
@@ -492,4 +504,41 @@ svg > path {
 	flex-direction: row;
 	gap: 5px;
 	margin: 15px;
+}
+
+#sidebar .sidebar-icon:hover, #sidebar .sidebar-icon + div:hover {
+	background-color: #63636384;
+	transition: 2.2s ease;
+}
+
+.sidebar-icon{
+	animation: .5s linear 1s infinite alternate slidein;
+}
+
+
+.project-entries:hover div, .project-entries div:hover {
+	animation: 0.5s linear 0s alternate rise, 0.5s linear 0s alternate transparency;
+}
+
+@keyframes rise {
+	from {
+		transform: translateY(100px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes transparency {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+#sidebar:hover{
+	background-color: #63636384;
+	transition: background-color 1s ease;
 }
