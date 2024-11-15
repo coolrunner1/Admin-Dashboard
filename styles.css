@@ -76,7 +76,7 @@
 	#sidebar-icons > div{
 		font-size: 0px;
 	}
-	#avatar.second-avatar{
+	#avatar2{
 		height: 0;
 		width: 0;
 		background-image: none;
@@ -331,7 +331,7 @@ svg > path {
 	background-size: cover;
 }
 
-#avatar, .trending-icons{
+#avatar, #avatar2, .trending-icons{
 	background-image: url(https://avatars.githubusercontent.com/u/153802775?v=4);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -356,7 +356,7 @@ svg > path {
 	padding-bottom: 0;
 }
 
-.second-avatar{
+#avatar2{
 	max-width: 60px;
 	max-height: 60px;
 }
