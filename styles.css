@@ -25,6 +25,17 @@
 	
 }
 
+#avatar, #avatar2, .trending-icons{
+	background-image: url(https://avatars.githubusercontent.com/u/153802775?v=4);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width:10vw;
+	height:10vw;
+	max-width: 50px;
+	max-height: 50px;
+	border-radius: 100px;
+}
+
 @media screen{
 	#main-container {
 	--sidebar-size: clamp(10px, 30%, 300px);
@@ -329,17 +340,6 @@ svg > path {
 	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-
-#avatar, #avatar2, .trending-icons{
-	background-image: url(https://avatars.githubusercontent.com/u/153802775?v=4);
-	background-repeat: no-repeat;
-	background-size: cover;
-	width:10vw;
-    height:10vw;
-	max-width: 50px;
-	max-height: 50px;
-	border-radius: 100px;
 }
 
 .header-text{
