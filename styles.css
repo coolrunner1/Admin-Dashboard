@@ -61,7 +61,7 @@
 	}
 }
 
-@media screen and (max-width: 735px){
+@media screen and (max-width: 900px){
 	#main-container {
 	--sidebar-size: 55px;
 	}
@@ -82,10 +82,10 @@
 		--name-size: 0;
 	}
 	#first-header > div{
-		font-size: 0px;
+		font-size: 0;
 	}
 	#sidebar-icons > div{
-		font-size: 0px;
+		font-size: 0;
 	}
 	#avatar2{
 		height: 0;
@@ -278,12 +278,11 @@ button, input {
 	display: flex;
 	justify-content: center;
 	padding: 10px 10px;
-	margin: 0 25px;
 	width: 100%;
 	/*max-width: 50px;*/
 	height: 50px;
 	color: var(--header-color);
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: Arial, serif;
 	font-weight: bolder;
 	font-size: var(--button-font-size);
 	background-color: transparent;
@@ -291,7 +290,6 @@ button, input {
 	border-color: transparent;
 	border-radius: 10px;
 	margin: 0;
-	font-family: arial;
 }
 
 input{
@@ -349,11 +347,10 @@ svg > path {
 
 #sidebar-icons{
 	display: grid;
-	padding: 12px;
 	gap: 10px;
 	grid-template-columns: clamp(30px, 10%, 45px) auto;
 	grid-template-rows: repeat(6, 50px) 75px repeat(3, 50px);
-	padding-bottom: 0;
+	padding: 12px 12px 0;
 }
 
 #avatar2{
@@ -394,7 +391,6 @@ svg > path {
 	display: grid;
 	grid-template-columns: 8px auto;
 	background-color: var(--header-color);
-	border: transparent;
 	border-color: var(--header-color);
 	border-left-color: #f0b429;
 	border-radius: 10px;
